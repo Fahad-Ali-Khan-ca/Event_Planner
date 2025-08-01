@@ -1,10 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { FavoritesProvider } from './contexts/FavoritesContext';
+import AppNavigator from './navigation';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+       <FavoritesProvider><AppNavigator/></FavoritesProvider>
       <StatusBar style="auto" />
     </View>
   );
